@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/cmdAllBooks"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lihat semua buku"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/cmdAlreadyRead"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/cmdAlreadyRead"
+        app:layout_constraintTop_toBottomOf="@+id/lblAppName" />
+
+    <Button
+        android:id="@+id/cmdFavorite"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Buku Favorit"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/cmdAbout"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/cmdAbout"
+        app:layout_constraintTop_toBottomOf="@+id/cmdCurrentReading" />
+
+    <Button
+        android:id="@+id/cmdAlreadyRead"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Buku sudah dibaca"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/cmdWantToRead"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/cmdWantToRead"
+        app:layout_constraintTop_toBottomOf="@+id/cmdAllBooks" />
+
+    <Button
+        android:id="@+id/cmdCurrentReading"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Buku sedang dibaca"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/cmdFavorite"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/cmdFavorite"
+        app:layout_constraintTop_toBottomOf="@+id/cmdWantToRead" />
+
+    <Button
+        android:id="@+id/cmdWantToRead"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Buku ingin dibaca"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/cmdCurrentReading"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/cmdCurrentReading"
+        app:layout_constraintTop_toBottomOf="@+id/cmdAlreadyRead" />
+
+    <Button
+        android:id="@+id/cmdAbout"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tentang Aplikasi"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/lblDeveloper"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/lblDeveloper"
+        app:layout_constraintTop_toBottomOf="@+id/cmdFavorite"
+        android:onClick="keluar"
+        />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/subhanmaulana"
+        app:layout_constraintEnd_toEndOf="@+id/lblAppName"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/lblAppName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@mipmap/subhanmaulana" />
+
+    <TextView
+        android:id="@+id/lblAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lemon"
+        android:text="My Perpus"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cmdAllBooks"
+        app:layout_constraintStart_toStartOf="@+id/cmdAllBooks"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblDeveloper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/lemon"
+        android:text="Dikembangkan oleh Subhan Maulana"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cmdAbout"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
